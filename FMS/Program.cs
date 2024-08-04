@@ -113,7 +113,7 @@ try
        //options.Cookie.Expiration = TimeSpan.FromDays(1);
     });
     //****************************************************Data Protection*******************************// 
-    builder.Services.AddDataProtection().PersistKeysToDbContext<AppDbContext>();
+    //builder.Services.AddDataProtection().PersistKeysToDbContext<AppDbContext>();
     //****************************************************Global Autherization****************************************************//
     builder.Services.AddControllersWithViews(options =>
     {

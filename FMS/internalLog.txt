@@ -2757,3 +2757,15 @@
 2024-03-25 21:39:15.2649 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\MyProjets\1.MVC Core\FMS\FMS\bin\Debug\net7.0\NLog.config
 2024-03-25 21:39:15.2879 Info Configuration initialized.
 2024-03-25 21:39:18.8854 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\MyProjets\1.MVC Core\FMS\FMS\bin\Debug\net7.0\NLog.config
+2024-08-04 07:07:36.5509 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-08-04 07:07:36.5746 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-08-04 07:07:36.5952 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.3.1999. Product version: 5.2.3+a5ddef92a8afb22508450803e37c001f4a3ba52a. GlobalAssemblyCache: False
+2024-08-04 07:07:36.6302 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Projects\MVC\FMS\bin\Debug\net7.0\NLog.config
+2024-08-04 07:07:36.6505 Info Configuration initialized.
+2024-08-04 07:07:37.9109 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Projects\MVC\FMS\bin\Debug\net7.0\NLog.config
+2024-08-04 07:10:08.1044 Info Registered target NLog.Targets.FileTarget(Name=alldata)
+2024-08-04 07:10:08.1325 Info Registered target NLog.Targets.FileTarget(Name=otherFile-web)
+2024-08-04 07:10:08.1676 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.3.1999. Product version: 5.2.3+a5ddef92a8afb22508450803e37c001f4a3ba52a. GlobalAssemblyCache: False
+2024-08-04 07:10:08.2060 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Projects\MVC\FMS\bin\Debug\net7.0\NLog.config
+2024-08-04 07:10:08.2589 Info Configuration initialized.
+2024-08-04 07:10:09.2943 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Projects\MVC\FMS\bin\Debug\net7.0\NLog.config

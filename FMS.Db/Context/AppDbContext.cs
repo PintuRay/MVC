@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FMS.Db.Context;
 
-public partial class AppDbContext : IdentityDbContext<AppUser>, IDataProtectionKeyContext
+public partial class AppDbContext : IdentityDbContext<AppUser>/*, IDataProtectionKeyContext*/
 {
     public AppDbContext()
     {
