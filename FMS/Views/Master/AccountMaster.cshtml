@@ -1,0 +1,289 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Account Master";
+}
+@section additionalStyles {
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="~/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1></h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            Account Master
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <!-------------Sub-Ledger------------------>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title"><b>Sub Ledger</b></h3>
+                                            <a href="@Url.Action("SubLedger", "Master")" class="btn btn-primary btn-link ml-1" style="border: 0px;color: #fff; background-color:#337AB7; border-color: #3C8DBC; border-radius: 4px; float:right">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <table id="tblSubLedger" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="30%"> Ledger</th>
+                                                        <th width="30%">SubLedger</th>
+                                                        <th width="20%">Opening Bal</th>
+                                                        <th width="20%">Bal.Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <select class="form-control select2bs4" style="width: 100%;" id="SubLedgerLedgerId" name="ddnSubLedgerLedgerId">
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="SubledgerName" name="SubledgerName">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="SubledgerOpeningBal" name="SubledgerOpeningBal">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <select class="form-control select2bs4" style="width: 100%;" name="SubLedgerBalanceType">
+                                                                        <option value="Dr">Dr</option>
+                                                                        <option value="Cr">Cr</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="button" id="btnSubLedgerSubmit" class="btn btn-primary" style="float:right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <!-------------Ledger balance------------>
+                                <div class="col-md-6">
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title"><b>Ledger Balance</b></h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <table id="tblLedger" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="50%">Ledger Name</th>
+                                                        <th width="30%">Opening Bal</th>
+                                                        <th width="20%">Bal. Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <select class="form-control select2bs4" style="width: 100%;" id="ledgerId" name="ddnLedgerId">
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="openingBal" name="ledgerbal_OpeningBal">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <select class="form-control select2bs4" style="width: 100%;" name="Ledgerbal_BalanceType">
+                                                                        <option value="Dr">Dr</option>
+                                                                        <option value="Cr">Cr</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="button" id="btnLedgerBalSubmit" class="btn btn-primary" style="float:right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------------Sub-Ledger Balance------------------>
+                                <div class="col-md-6">
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title"><b>SubLedger Balance</b></h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <table id="tblLedger" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="50%">SubLedger Name</th>
+                                                        <th width="30%">Opening Bal</th>
+                                                        <th width="20%">Bal. Type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <select class="form-control select2bs4" style="width: 100%;" id="SubledgerId" name="ddnSubLedgerId">
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="openingBal" name="Subledgerbal_OpeningBal">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <select class="form-control select2bs4" style="width: 100%;" name="SubLedgerbal_BalanceType">
+                                                                        <option value="Dr">Dr</option>
+                                                                        <option value="Cr">Cr</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="button" id="btnSubLedgerBalSubmit" class="btn btn-primary" style="float:right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title"></h3>
+                            <a href="#LedgerBalanceList" class="btn btn-primary btn-link ml-1" style="border: 0px;color: #fff; background-color:#337AB7; border-color: #3C8DBC; border-radius: 4px;">
+                                <i class="fa-solid fa-eye"></i> <b>Ledger Balance</b>
+                            </a>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div id="loader" style="display:none;"></div>
+                            <div class="tblLedgerBalanceList">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <h3 class="card-title"></h3>
+                            <a href="#SubLedgerBalanceList" class="btn btn-primary btn-link ml-1" style="border: 0px;color: #fff; background-color:#337AB7; border-color: #3C8DBC; border-radius: 4px;">
+                                <i class="fa-solid fa-eye"></i> <b>SubLedger Balance</b>
+                            </a>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div id="loader" style="display:none;"></div>
+                            <div class="tblSubLedgerBalanceList">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@section additionalScripts {
+    <!--Fontawsome Kit-->
+    <script src="https://kit.fontawesome.com/70d8db024d.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/plugins/select2/js/select2.full.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="~/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Toastr -->
+    <script src="~/plugins/toastr/toastr.min.js"></script>
+    <!--Page Script-->
+    <script src="~/viewscripts/master/accountmaster.js"></script>
+    <script>
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        });
+    </script>
+}
