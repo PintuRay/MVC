@@ -1,12 +1,73 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projects\\MVC\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3362AFCD-759E-4D3E-A3C1-F6F37B87D3B1}|FMS.Model\\FMS.Model.csproj|c:\\projects\\mvc\\fms.model\\commonmodel\\companymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3362AFCD-759E-4D3E-A3C1-F6F37B87D3B1}|FMS.Model\\FMS.Model.csproj|solutionrelative:fms.model\\commonmodel\\companymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1369EDA9-4F32-466E-A6A4-AF852F2397EC}|FMS.Repository\\FMS.Repository.csproj|c:\\projects\\mvc\\fms.repository\\admin\\adminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1369EDA9-4F32-466E-A6A4-AF852F2397EC}|FMS.Repository\\FMS.Repository.csproj|solutionrelative:fms.repository\\admin\\adminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1369EDA9-4F32-466E-A6A4-AF852F2397EC}|FMS.Repository\\FMS.Repository.csproj|c:\\projects\\mvc\\fms.repository\\admin\\iadminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1369EDA9-4F32-466E-A6A4-AF852F2397EC}|FMS.Repository\\FMS.Repository.csproj|solutionrelative:fms.repository\\admin\\iadminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAdminRepo.cs",
+              "DocumentMoniker": "C:\\Projects\\MVC\\FMS.Repository\\Admin\\IAdminRepo.cs",
+              "RelativeDocumentMoniker": "FMS.Repository\\Admin\\IAdminRepo.cs",
+              "ToolTip": "C:\\Projects\\MVC\\FMS.Repository\\Admin\\IAdminRepo.cs",
+              "RelativeToolTip": "FMS.Repository\\Admin\\IAdminRepo.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA7wAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T02:39:03.593Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminRepo.cs",
+              "DocumentMoniker": "C:\\Projects\\MVC\\FMS.Repository\\Admin\\AdminRepo.cs",
+              "RelativeDocumentMoniker": "FMS.Repository\\Admin\\AdminRepo.cs",
+              "ToolTip": "C:\\Projects\\MVC\\FMS.Repository\\Admin\\AdminRepo.cs",
+              "RelativeToolTip": "FMS.Repository\\Admin\\AdminRepo.cs",
+              "ViewState": "AQIAAEkBAAAAAAAAAAAowHEBAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T02:39:56.444Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CompanyModel.cs",
+              "DocumentMoniker": "C:\\Projects\\MVC\\FMS.Model\\CommonModel\\CompanyModel.cs",
+              "RelativeDocumentMoniker": "FMS.Model\\CommonModel\\CompanyModel.cs",
+              "ToolTip": "C:\\Projects\\MVC\\FMS.Model\\CommonModel\\CompanyModel.cs",
+              "RelativeToolTip": "FMS.Model\\CommonModel\\CompanyModel.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAIBFwBIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T03:14:05.837Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
