@@ -430,7 +430,6 @@ namespace FMS.Repository.Admin
         public async Task<Result<BranchAllocationModel>> GetAllUserAndBranch()
         {
             Result<BranchAllocationModel> _Result = new();
-
             try
             {
                 _Result.IsSuccess = false;
@@ -584,8 +583,7 @@ namespace FMS.Repository.Admin
                 var Query = await _appDbContext.ProductTypes.Select(s => new ProductTypeModel { ProductTypeId = s.ProductTypeId, Product_Type = s.Product_Type }).ToListAsync();
                 if (Query.Count > 0)
                 {
-                    var ItemTypeList = Query;
-                    _Result.CollectionObjData = ItemTypeList;
+                    _Result.CollectionObjData = Query;
                     _Result.Response = ResponseStatusExtensions.ToStatusString(ResponseStatus.Status.Success);
                 }
                 _Result.IsSuccess = true;
